@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title>Buddy - Сопровождение иностранных студентов</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	
+	<body class="form_back">
+		<header>
+			<h3>MosPolytech.BUDDY</h1>
+			<a href="index.html">О нас</a>
+			<a href="report.html">Обратная связь</a>
+			<a href="#p2">Контакты</a>
+			<a href="authentication.html">Войти</a>
+		</header>
+		
+		<main>
+			<h1>Buddy-сообщество</h1>
+			<h4>Оставить обратную связь</h4>
+			
+			<div class="form">
+				<form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+
+					<label for="name">ФИО</label>
+					<input type="text" id="name" name="name" required>
+
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+
+					<label for="radios">Откуда вы узнали о нас?</label>
+					<div class="radio-group" id="radios" name="radios">
+						<label><input type="radio" name="source" value="Волонтёр Buddy" checked>Волонтёр Buddy</label>
+						<label><input type="radio" name="source" value="Сайт университета">Сайт университета</label>
+						<label><input type="radio" name="source" value="Иностранный отдел">Иностранный отдел</label>
+						<label><input type="radio" name="source" value="Другие студенты">Другие студенты</label>
+						<label><input type="radio" name="source" value="ЦПД">Центр проектной деятельности</label>
+					</div>
+
+					<label for="type">Тип обращения</label>
+					<select id="type" name="type" required>
+						<option value="Предложение">Предложение</option>
+						<option value="Жалоба">Жалоба</option>
+					</select>
+
+					<label for="message">Текст сообщения</label>
+					<textarea id="message" name="message" rows="6" required></textarea>
+
+					<label for="files">Вложения</label>
+					<input type="file" id="files" name="files">
+
+					<div class="check">
+						<label><input type="checkbox" name="agree" value="yes" required>Даю согласие на обработку персональных данных</label>
+					</div>
+
+					<button type="submit">Отправить</button>
+				</form>
+			</div>
+		</main>
+		
+		<footer class="footering" id="p2">
+			<p>Проект "Buddy. Разработка программы для иностранных студентов"</p>
+			<p>Центр проектной деятельности, Московский Политех, 2026</p>
+			<p>+7 (495) 234-11-301  |  urisa-buddy@mospoly.tech</p>
+		</footer>
+	</body>
+	
+</html>	
